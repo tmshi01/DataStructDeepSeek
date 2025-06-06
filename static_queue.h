@@ -23,5 +23,22 @@ public:
     void display();              // Display stack contents
     bool isEmpty();              // Check if the stack is empty
 };
+struct Queuenode{
+    int value;
+    Queuenode *next;
+};
+class Dynamicintqueue{
+private:
+    Queuenode *front;
+    Queuenode *rear;
+    int numItems;
+public:
+Dynamicintqueue();
+~Dynamicintqueue();
+void enqueue(int);
+void dequeue(int &);
+bool isEmpty()const;
+void clear();
+};
 
 #endif
